@@ -206,7 +206,40 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		
+      		<p><a href="https://github.com/electron/electron" target="_blank" rel="external">electron</a>写的图片编辑器，代码开源置<a href="https://github.com/Srawz/electron-image-editor" target="_blank" rel="external">GitHub</a></p>
+<p>#使用的库<br>编辑器参考：<a href="https://github.com/lalwanivikas/image-editor" target="_blank" rel="external">https://github.com/lalwanivikas/image-editor</a></p>
+<p>ui使用的是：<a href="http://photonkit.com/" target="_blank" rel="external">photon</a></p>
+<p>保存dom节点：<a href="https://github.com/tsayen/dom-to-image" target="_blank" rel="external">dom-to-image</a></p>
+<p>图片抓取：<a href="https://github.com/rharder/imagesnap" target="_blank" rel="external">https://github.com/rharder/imagesnap</a></p>
+<p>#期间遇到的坑：</p>
+<ul>
+<li><p>查看图片的路径问题：打包后路径不匹配，放弃nodejs的fs使用electron自带的path进行路径处理。</p>
+</li>
+<li><p>html5的文件操作：要使用createObjectURL创建一个虚拟url传递给img.scr，才能显示图片。另外不要释放url，否则将无法对此img标签进行后续操作。</p>
+</li>
+<li><p>保存图片：尝试了许多方法，主要的思路有三个</p>
+<ol>
+<li>canvas：应该是最主流的方法，倒是遇到了很多问题，例如文件放不到canvas中、下载后无css样式等，准备接下来刷<a href="http://javascript30.com/" target="_blank" rel="external">js30天闯关</a>的时候在系统学习canvas</li>
+<li>网页截屏：<a href="http://phantomjs.org/" target="_blank" rel="external">phantomjs</a>不能等待本地的css，js加载，<a href="https://github.com/sindresorhus/pageres" target="_blank" rel="external">pageres</a>好像可以，下次再用</li>
+<li>将dom结点直接转化成图片：然后我找到了<a href="https://github.com/tsayen/dom-to-image" target="_blank" rel="external">dom-to-image</a>——<br> dom-to-img是一个用js写的可以将任意dom结点转化成svg或png、jpeg等图片格式的库。实现原理如下：<ol>
+<li>复制dom结点</li>
+<li>计算每个结点的style，与其子结点</li>
+<li>嵌入网页字体</li>
+<li>嵌入图像</li>
+<li>将复制到的结点转化为xml</li>
+<li>将xml放入 <foreignobject>标签，转到svg，再转到url</foreignobject></li>
+<li>获取数据保存到Uint8Array，创建一个img传递给离屏的canvas，最后读取。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>使用<a href="https://github.com/rharder/imagesnap" target="_blank" rel="external">imagesnap</a>和chrome的webkitGetUserMedia配合进行图像捕捉只需将imagesnap放入img文件夹下，运行</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ./img &amp;&amp; ./imagesnap</div></pre></td></tr></table></figure>
+<p>  即可保存图像到img文件夹下</p>
+</li>
+</ul>
+<p>#总结<br>electron可以使用html+css+js的一套前端开发模式开发桌面应用，用起来相当顺手，而且有强大的nodejs作为保障，可以完成大部分桌面应用功能。</p>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
