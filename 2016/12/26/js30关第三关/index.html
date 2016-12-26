@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>js30关第二关 | Srawz</title>
+  <title>js30关第三关 | Srawz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="css好难：cubic-bezier()、transform-origin、transition">
+  <meta name="description" content="#css Variables
+123456// 声明一个变量：  :root &amp;#123;      --base: #ffc600;      --spacing: 10px;      --blur: 10px;    &amp;#125;
+这里我们借助了上篇文章 结构性伪类 中的 :root{ } 伪类，在全局 :root{ } 伪类中定义CSS 变量。123456//使用变量img &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js30关第二关">
-<meta property="og:url" content="http://yoursite.com/2016/12/25/js30关第二关/index.html">
+<meta property="og:title" content="js30关第三关">
+<meta property="og:url" content="http://yoursite.com/2016/12/26/js30关第三关/index.html">
 <meta property="og:site_name" content="Srawz">
-<meta property="og:description" content="css好难：cubic-bezier()、transform-origin、transition">
-<meta property="og:updated_time" content="2016-12-25T12:21:54.000Z">
+<meta property="og:description" content="#css Variables
+123456// 声明一个变量：  :root &amp;#123;      --base: #ffc600;      --spacing: 10px;      --blur: 10px;    &amp;#125;
+这里我们借助了上篇文章 结构性伪类 中的 :root{ } 伪类，在全局 :root{ } 伪类中定义CSS 变量。123456//使用变量img &amp;#123;">
+<meta property="og:updated_time" content="2016-12-26T05:01:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js30关第二关">
-<meta name="twitter:description" content="css好难：cubic-bezier()、transform-origin、transition">
+<meta name="twitter:title" content="js30关第三关">
+<meta name="twitter:description" content="#css Variables
+123456// 声明一个变量：  :root &amp;#123;      --base: #ffc600;      --spacing: 10px;      --blur: 10px;    &amp;#125;
+这里我们借助了上篇文章 结构性伪类 中的 :root{ } 伪类，在全局 :root{ } 伪类中定义CSS 变量。123456//使用变量img &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="Srawz" type="application/atom+xml">
   
@@ -141,25 +147,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js30关第二关" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js30关第三关" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      js30关第二关
+      js30关第三关
     </h1>
   
 
-        <a href="/2016/12/25/js30关第二关/" class="archive-article-date">
-  	<time datetime="2016-12-25T12:05:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-25</time>
+        <a href="/2016/12/26/js30关第三关/" class="archive-article-date">
+  	<time datetime="2016-12-26T05:01:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-26</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>css好难：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank" rel="external">cubic-bezier()</a>、<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin" target="_blank" rel="external">transform-origin</a>、<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition" target="_blank" rel="external">transition</a></p>
+        <p>#css Variables</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 声明一个变量：</div><div class="line">  :root &#123;</div><div class="line">      --base: #ffc600;</div><div class="line">      --spacing: 10px;</div><div class="line">      --blur: 10px;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>这里我们借助了上篇文章 结构性伪类 中的 :root{ } 伪类，在全局 :root{ } 伪类中定义CSS 变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//使用变量</div><div class="line">img &#123;</div><div class="line">      padding: var(--spacing);</div><div class="line">      background: var(--base);</div><div class="line">      filter: blur(var(--blur));</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>#伪类<br><code>:root</code> 伪类匹配文档树的根元素。应用到HTML，:root 即表示为元素，除了优先级更高外，相当于html标签选择器。<br><code>:empty</code> 伪类，代表没有子元素的元素。 这里说的子元素，只计算元素结点及文本（包括空格），注释、运行指令不考虑在内。<br><code>:not</code> 伪类：CSS否定伪类，:not(X)，可以选择除某个元素之外的所有元素。<br><code>:target</code>代表一个特殊的元素，若是谈论区别的话，它需要一个id去匹配文档URI的片段标识符。</p>
+<p>提示：伪类名称对大小写不敏感。</p>
+<p>#其他<br>label，<strong><em>for</em></strong> 属性规定 label 与哪个表单元素绑定。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/dataset" target="_blank" rel="external">dataset</a>：自定义data-属性，后接小写变量名</p>
+<p><code>||</code>运算符可以用来填充默认值<br><code>const suffix = this.dataset.sizing || &#39;&#39;;</code><br>当<code>this.dataset.sizing</code>为<code>undefined</code>时<code>suffix = ‘’</code></p>
 
       
 
@@ -244,7 +257,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/25/js30关第二关/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/26/js30关第三关/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -258,18 +271,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/26/js30关第三关/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          js30关第三关
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/12/23/js30关第一关/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js30关第一关</div>
+    <a href="/2016/12/25/js30关第二关/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js30关第二关</div>
       <i class="icon-circle-right"></i>
     </a>
   

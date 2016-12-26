@@ -139,6 +139,67 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js30关第三关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/26/js30关第三关/">js30关第三关</a>
+    </h1>
+  
+
+        <a href="/2016/12/26/js30关第三关/" class="archive-article-date">
+  	<time datetime="2016-12-26T05:01:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-26</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#css Variables</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 声明一个变量：</div><div class="line">  :root &#123;</div><div class="line">      --base: #ffc600;</div><div class="line">      --spacing: 10px;</div><div class="line">      --blur: 10px;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>这里我们借助了上篇文章 结构性伪类 中的 :root{ } 伪类，在全局 :root{ } 伪类中定义CSS 变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//使用变量</div><div class="line">img &#123;</div><div class="line">      padding: var(--spacing);</div><div class="line">      background: var(--base);</div><div class="line">      filter: blur(var(--blur));</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>#伪类<br><code>:root</code> 伪类匹配文档树的根元素。应用到HTML，:root 即表示为元素，除了优先级更高外，相当于html标签选择器。<br><code>:empty</code> 伪类，代表没有子元素的元素。 这里说的子元素，只计算元素结点及文本（包括空格），注释、运行指令不考虑在内。<br><code>:not</code> 伪类：CSS否定伪类，:not(X)，可以选择除某个元素之外的所有元素。<br><code>:target</code>代表一个特殊的元素，若是谈论区别的话，它需要一个id去匹配文档URI的片段标识符。</p>
+<p>提示：伪类名称对大小写不敏感。</p>
+<p>#其他<br>label，<strong><em>for</em></strong> 属性规定 label 与哪个表单元素绑定。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/dataset" target="_blank" rel="external">dataset</a>：自定义data-属性，后接小写变量名</p>
+<p><code>||</code>运算符可以用来填充默认值<br><code>const suffix = this.dataset.sizing || &#39;&#39;;</code><br>当<code>this.dataset.sizing</code>为<code>undefined</code>时<code>suffix = ‘’</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js闯关/">js闯关</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/26/js30关第三关/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-js30关第二关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
